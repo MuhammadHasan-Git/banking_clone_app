@@ -1,4 +1,5 @@
 import 'package:banking_clone_app/data_json/balance_json.dart';
+import 'package:banking_clone_app/pages/card_page.dart';
 import 'package:banking_clone_app/theme/color.dart';
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
@@ -62,9 +63,10 @@ class _DashboardPageState extends State<DashboardPage> {
                       return Padding(
                         padding: const EdgeInsets.only(right: 20),
                         child: Container(
-                          width: size.width * 0.7,
+                          width: size.width,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -319,29 +321,34 @@ class _DashboardPageState extends State<DashboardPage> {
                 "Cards",
                 style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
               ),
-              Container(
-                width: 90,
-                height: 22,
-                decoration: BoxDecoration(
-                    color: secondary.withOpacity(0.5),
-                    borderRadius: BorderRadius.circular(8)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.add,
-                      size: 16,
-                      color: primary,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 110,
+                    height: 30,
+                    child: ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: secondary.withOpacity(0.9),
+                          side: BorderSide(color: secondary.withOpacity(0.5)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8))),
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.add,
+                        color: primary,
+                        size: 16,
+                      ),
+                      label: Text(
+                        "ADD CARD",
+                        style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w600,
+                            color: primary),
+                      ),
                     ),
-                    Text(
-                      "ADD CART",
-                      style: TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.w600,
-                          color: primary),
-                    )
-                  ],
-                ),
+                  )
+                ],
               )
             ],
           ),
@@ -350,7 +357,10 @@ class _DashboardPageState extends State<DashboardPage> {
           height: 15,
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => CardPage()));
+          },
           child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
