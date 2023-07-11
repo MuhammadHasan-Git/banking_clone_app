@@ -1,4 +1,4 @@
-import 'dart:math';
+
 
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:banking_clone_app/pages/dashboard_page.dart';
@@ -6,7 +6,7 @@ import 'package:banking_clone_app/theme/color.dart';
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
