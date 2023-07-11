@@ -58,6 +58,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   physics: BouncingScrollPhysics(),
+                  
                   child: Row(
                     children: List.generate(balanceLists.length, (index) {
                       return Padding(

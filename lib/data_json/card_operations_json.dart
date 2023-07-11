@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const List cardOperations = [
-  {"icon": Icon(Icons.credit_card_outlined), "title": "Top up card"},
-  {"icon": Icon(Icons.wallet), "title": "Payments"},
-  {"icon": Icon(Icons.arrow_right), "title": "Card output"},
+  {"icon": FontAwesomeIcons.creditCard, "title": "Top up card"},
+  {"icon": FontAwesomeIcons.wallet, "title": "Payments"},
+  {"icon": FontAwesomeIcons.arrowRight, "title": "Card output"},
   {
-    "icon": Icon(Icons.credit_card_outlined),
+    "icon": FontAwesomeIcons.creditCard,
     "title": "Take all the money from the card"
   }
 ];
